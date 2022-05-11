@@ -1,8 +1,8 @@
 const createProxyMiddleware = require('http-proxy-middleware');
 const { env } = require('process');
 
-const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_HTTPS_PORT}` :
-  env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'http://localhost:48513';
+const target = env.ASPNETCORE_HTTPS_PORT ? `https://pizza-react.azurewebsites.net:${env.ASPNETCORE_HTTPS_PORT}` :
+  env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'https://pizza-react.azurewebsites.net:48513';
 
 const context =  [
   "/weatherforecast",
