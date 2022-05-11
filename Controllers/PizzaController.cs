@@ -7,7 +7,7 @@ using System.Security.Claims;
 
 namespace aspnetcore_react_auth.Controllers;
 
-[Authorize]
+[Authorize(Policy = "RequireAdminRole")]
 [ApiController]
 [Route("[controller]")]
 public class PizzaController : ControllerBase
