@@ -96,7 +96,6 @@ namespace aspnetcore_react_auth.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
